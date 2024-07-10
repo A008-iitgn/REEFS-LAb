@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>People</title>
+    <style>
+    body {
+        /* font-family: 'Georgia', serif; */
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        color: #333;
+    }
+    .pageh {
+        background: url(img/crct.jpg) no-repeat center center/cover;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 28vh;
+        color: black;
+        padding-top: 90px;
+    }
+
+    .pageh h1 {
+        font-size: 3em;
+        margin: 0;
+        color: #222;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #f7f7f7;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        margin: 2rem 0 1rem;
+        color: #555;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .item {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .item img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .item h2 {
+        font-size: 1.5em;
+        margin: 10px 0;
+        color: #222;
+    }
+
+    .item h4 {
+        font-size: 1.2em;
+        margin: 10px 0;
+        color: #555;
+    }
+
+    .item p {
+        font-size: 1em;
+        color: #777;
+    }
+
+    .item a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+
+    .item a:hover {
+        text-decoration: underline;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        color: #333;
+        margin: 0 5px;
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+
+    .social-icons a:hover {
+        color: #0077b5; /* LinkedIn default color */
+    }
+
+    .social-icons a.instagram:hover {
+        color: #E4405F; /* Instagram default color */
+    }
+
+    /* Highlight Pankaj Khanna */
+    .highlight {
+        border: 2px solid #00796b;
+        box-shadow: 0 0 15px rgba(0, 121, 107, 0.5);
+    }
+
+    .postdoc-section {
+        background-color: #f0f0f0;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .Alumini-section {
+        background-color: #e0e0e0;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .Alumini-item {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    </style>
+    <link rel="stylesheet" href="v.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="KAUST Logo">
+        </a>
+        <nav id="navbar"></nav>
+    </header>
+    <div class="pageh">
+        <h1>Alumini</h1>
+    </div>
+    <hr>
+    <div class="container">
+        <!-- Alumini Section -->
+        <div class="section-title">Alumini</div>
+        <div class="Alumini-section">
+            <div class="Alumini-item">
+                <div class="item">
+                    <a href="HORTHING.HTML"><img src="img/Horthing V. Zimik..jpg" alt=""></a>
+                    <h2><a href="HORTHING.HTML">Dr. Horthing V. Zimik</a></h2>
+                    <!-- <h2>Dr. Horthing V. Zimik</h2> -->
+                    Alumni
+                    <h4>Research Interests: </h4>
+                    Hydrogeochemistry, geothermal energy, stable isotope systematics, photogrammetry
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="SHUBHANGI.HTML"><img src="img/Shubhangi Kala..jpg" alt=""></a>
+                    <h2><a href="SHUBHANGI.HTML">Dr Subhangi Kala</a></h2>
+                    <!-- <h2>Dr Subhangi Kala</h2> -->
+                    Alumini
+                    <h4>Research Interests: </h4>
+                    Carbon sequestration, Unconventional reservoir exploration and characterization (gas shales), 
+                    Geoscience and Drones
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Loadcomponents.js"></script>
+</html>
