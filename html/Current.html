@@ -1,0 +1,450 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Tutorial</title>
+    <style>
+    /* #head{
+        margin: 0px;
+        padding: 0px;
+        background-repeat: no-repeat;
+        background-size: 175%;
+    } */
+    #header{
+    background: url(img/lal.jpg);
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-position: 50%;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 28vh;
+}
+    .pageh{
+    
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+
+    }
+    
+    .container{
+        display: grid;
+        /* grid-template-columns: 300px 100px 100px; */
+        /* grid-template-columns: 300px auto 100px; */
+        /* grid-template-columns: 1fr 4fr 1fr; */
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 2rem;
+        background-color: rgb(241, 234, 234);
+    }
+    .item{
+        /* height: 100px;
+        width: 100px; */
+        
+        /* background-color: grey; */
+        padding: 15px 5px;
+    }
+    .item img{
+        height: 150px;
+        width: 150px;
+        padding: auto;
+        margin: auto;
+    }
+    H1{
+        color: black;
+        font-size: 75px;
+    }
+    </style>
+    <link rel="stylesheet" href="v.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="">
+        </a>
+        <nav id="navbar">
+        </nav>
+    </header>
+    <div class="head">
+        <div class="pageh">
+            <H1>People</H1>
+        </div>
+    </div>
+    <hr>
+    <div class="can">
+        <div class="item">
+            <img src="img/Pankaj Khanna.jpg" alt="">
+            <h2>Dr. Pankaj Khanna</h2>
+            Assistant Professor, Earth Sciences, IIT Gandhinagar
+            <h4>Research Interests: </h4>
+            Modern and fossil carbonates, Reservoir architecture, Quaternary sea-level fluctuations, 
+            Sequence stratigraphy, Geoscience and Drones, Geothermal energy, CCUS
+        </div>
+    </div>
+    <hr>
+        <div class="item">
+            <img src="img/Md Salim Akhtar.jpg" alt="">
+            <h2>Dr. MD Salim Akhtar</h2>
+            Post Doctoral fellow
+            <h4>Research Interests: </h4>
+            Igneous petrology, geochronology and geochemistry of ophiolites using advanced geochemical modeling 
+to understand the melt-source characteristics.
+        </div>
+        <div class="item">
+            <img src="img/Shradha Menon.jpg" alt="">
+            <h2>Shradha Menon</h2>
+            PhD
+            <h4>Research Interests: </h4>
+            Carbonate sedimentology, Paleoclimatology, Isotope geochemistry
+        </div>
+        <div class="item">
+            <img src="img/Saikat Kumar Misra.jpg" alt="">
+            <h2>Saikat Kumar Misra</h2>
+            PhD
+            <h4>Research Interests: </h4>
+            Modern carbonate sedimentology, Late Quaternary sea-level fluctuations
+        </div>
+        <div class="item">
+            <img src="img/Daudayal Sharma.jpg" alt="">
+            <h2>Daudayal Sharma</h2>
+            PhD
+            <h4>Research Interests: </h4>
+            Geothermal Energy, Field Geology, Petrology
+        </div>
+        <div class="item">
+            <img src="img/Debasmita Datta.jpg" alt="">
+            <h2>Debasmita Datta</h2>
+            PhD
+            <h4>Research Interests: </h4>
+            Carbon Sequestration, Sedimentology, Sequence Stratigraphy
+        </div>
+        <div class="item">
+            <img src="img/Akbar Ali.jpg" alt="">
+            <h2>(Aamaan) Akbar Ali</h2>
+            PhD
+            <h4>Research Interests: </h4>
+            Hyperspectral imaging
+        </div>
+        <div class="item">
+            <img src="img/Poornima Karki.jpg" alt="">
+            <h2>Poornima Karki</h2>
+            PhD
+            <h4>Research Interests: </h4>
+            Carbonate Sedimentology
+        </div>
+        <div class="item">
+            <img src="img/Kushal Chandra Sarkar.jpg" alt="">
+            <h2>Kushal Chandra Sarkar</h2>
+            PhD
+            <h4>Research Interests: </h4>
+            Carbonate Sedimentology, Carbon Sequestration
+        </div>
+    </div>
+    <div id="footer"></div>
+
+</body>
+<script src="Loadcomponents.js"></script>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>People</title>
+    <style>
+    body {
+        /* font-family: 'Georgia', serif; */
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        color: #333;
+    }
+    .pageh {
+        background: url(img/crct.jpg) no-repeat center center/cover;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 28vh;
+        color: black;
+        padding-top: 90px;
+    }
+
+    .pageh h1 {
+        font-size: 3em;
+        margin: 0;
+        color: #222;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #f7f7f7;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        margin: 2rem 0 1rem;
+        color: #555;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 0.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .item {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .item img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .item h2 {
+        font-size: 1.5em;
+        margin: 10px 0;
+        color: #222;
+    }
+
+    .item h4 {
+        font-size: 1.2em;
+        margin: 10px 0;
+        color: #555;
+    }
+
+    .item p {
+        font-size: 1em;
+        color: #777;
+    }
+
+    .item a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+
+    .item a:hover {
+        text-decoration: underline;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a {
+        color: #333;
+        margin: 0 5px;
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+
+    .social-icons a:hover {
+        color: #0077b5; /* LinkedIn default color */
+    }
+
+    .social-icons a.instagram:hover {
+        color: #E4405F; /* Instagram default color */
+    }
+
+    /* Highlight Pankaj Khanna */
+    .highlight {
+        border: 2px solid #00796b;
+        box-shadow: 0 0 15px rgba(0, 121, 107, 0.5);
+    }
+
+    .postdoc-section {
+        background-color: #f0f0f0;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .phd-section {
+        background-color: #e0e0e0;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .phd-item {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    </style>
+    <link rel="stylesheet" href="v.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="KAUST Logo">
+        </a>
+        <nav id="navbar"></nav>
+    </header>
+    <div class="pageh">
+        <h1>Current</h1>
+    </div>
+    <hr>
+    <div class="container">
+        <!-- Pankaj Khanna Section -->
+        <div class="item highlight">
+            <a href="DR PANKAJ KHANNA.HTML"><img src="img/Pankaj Khanna.jpg" alt="Dr. Pankaj Khanna"></a>          
+            <h2><a href="DR PANKAJ KHANNA.HTML">Dr. Pankaj Khanna</a></h2>
+            <p>Assistant Professor, Earth Sciences, IIT Gandhinagar</p>
+            <h4>Research Interests:</h4>
+            <p>Modern and fossil carbonates, Reservoir architecture, Quaternary sea-level fluctuations, Sequence stratigraphy, Geoscience and Drones, Geothermal energy, CCUS</p>
+            <div class="social-icons">
+                <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Post Doctoral Section -->
+        <div class="section-title">Post Doctoral</div>
+        <div class="postdoc-section">
+            <div class="item">
+                <a href="salim.html"><img src="img/Md Salim Akhtar.jpg" alt="Dr. MD Salim Akhtar"></a>
+                <h2><a href="salim.html">Dr. MD Salim Akhtar</a></h2>
+                <p>Post Doctoral fellow</p>
+                <h4>Research Interests:</h4>
+                <p>Igneous petrology, geochronology and geochemistry of ophiolites using advanced geochemical modeling to understand the melt-source characteristics.</p>
+                <div class="social-icons">
+                    <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PhD Section -->
+        <div class="section-title">PhD</div>
+        <div class="phd-section">
+            <div class="phd-item">
+                <div class="item">
+                    <a href="Shradha.html"><img src="img/Shradha Menon.jpg" alt="Shradha Menon"></a>
+                    <h2><a href="Shradha.html">Shradha Menon</a></h2>
+                    <p>PhD</p>
+                    <h4>Research Interests:</h4>
+                    <p>Carbonate sedimentology, Paleoclimatology, Isotope geochemistry</p>
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="Saikat.html"><img src="img/Saikat Kumar Misra.jpg" alt="Saikat Kumar Misra"></a>
+                    <h2><a href="Saikat.html">Saikat Kumar Misra</a></h2>
+                    <p>PhD</p>
+                    <h4>Research Interests:</h4>
+                    <p>Modern carbonate sedimentology, Late Quaternary sea-level fluctuations</p>
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="Daudayal.html"><img src="img/Daudayal Sharma.jpg" alt="Daudayal Sharma"></a>
+                    <h2><a href="Daudayal.html">Daudayal Sharma</a></h2>
+                    <p>PhD</p>
+                    <h4>Research Interests:</h4>
+                    <p>Geothermal Energy, Field Geology, Petrology</p>
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="debasmita.html"><img src="img/Debasmita Datta.jpg" alt="Debasmita Datta"></a>
+                    <h2><a href="Debasmita.html">Debasmita Datta</a></h2>
+                    <p>PhD</p>
+                    <h4>Research Interests:</h4>
+                    <p>Carbon Sequestration, Sedimentology, Sequence Stratigraphy</p>
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="Akbar.html"><img src="img/Akbar Ali.jpg" alt="(Aamaan) Akbar Ali"></a>
+                    <h2><a href="Akbar.html">(Aamaan) Akbar Ali</a></h2>
+                    <p>PhD</p>
+                    <h4>Research Interests:</h4>
+                    <p>Hyperspectral imaging</p>
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="poornima.html"><img src="img/Poornima Karki.jpg" alt="Poornima Karki"></a>
+                    <h2><a href="Poornima.html">Poornima Karki</a></h2>
+                    <p>PhD</p>
+                    <h4>Research Interests:</h4>
+                    <p>Carbonate Sedimentology</p>
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="Kushal.html"><img src="img/Kushal Chandra Sarkar.jpg" alt="Kushal Chandra Sarkar"></a>
+                    <h2><a href="Kushal.html">Kushal Chandra Sarkar</a></h2>
+                    <p>PhD</p>
+                    <h4>Research Interests:</h4>
+                    <p>Carbonate Sedimentology, Carbon Sequestration</p>
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="sp.html"><img src="img/sp.jfif" alt="sriparvathi S"></a>
+                    <h2><a href="sp.html">sriparvathi</a></h2>
+                    <p>PhD</p>
+                    <h4>Research Interests:</h4>
+                    <p>exploring the carbon capture and storage (CCS) potential within blue carbon ecosystems,Utilizing a combination of remote sensing, drone technology, and field observations, I aim to assess and quantify carbon sequestration capacities in coastal and marine environments.</p>
+                    <div class="social-icons">
+                        <a href="" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-title">B Tech</div>
+        <div class="B Tech-section">
+            <div class="item">
+                <a href="Abhiteja.html"><img src="img/ps.jfif" alt="Pasupula Abhiteja"></a>
+                <h2><a href="Abhiteja.html">Pasupula Abhiteja</a></h2>
+                <p>B Tech 21</p>
+                <h4>Research Interests:</h4>
+                <p>RTK and PPK in drones, Construction of drones</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/abhiteja-pasupula-453338274
+                    " target="_blank" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+<script src="Loadcomponents.js"></script>
+</html>
+
+
